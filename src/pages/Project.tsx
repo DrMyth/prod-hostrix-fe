@@ -149,7 +149,7 @@ const ProjectPage = () => {
     try {
       const repoPath = gitUrl.replace("https://github.com/", "");
       const response = await fetch(
-        `https://api.github.com/repos/${repoPath}commits?per_page=5`
+        `https://api.github.com/repos/${repoPath}/commits?per_page=5`
       );
       const data = await response.json();
       // console.log("Commit data: ", data);
@@ -179,7 +179,7 @@ const ProjectPage = () => {
     try {
       const repoPath = gitUrl.replace("https://github.com/", "");
       const response = await fetch(
-        `https://api.github.com/repos/${repoPath}branches`
+        `https://api.github.com/repos/${repoPath}/branches`
       );
       const data = await response.json();
       setBranches(data);

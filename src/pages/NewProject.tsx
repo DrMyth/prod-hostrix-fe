@@ -6,8 +6,7 @@ import { Label } from "@/components/ui/label";
 import { GitBranch, LayoutTemplate, Cpu, Server } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { Textarea } from "@/components/ui/textarea";
-import axios from "axios";
-// import { axiosInstance } from "@/lib/utils";
+import { axiosInstance } from "@/lib/utils";
 
 type ProjectType = "static-site" | "serverless-backend" | "fullstack-app";
 
@@ -20,18 +19,41 @@ export default function NewProject() {
   const [projectDescription, setProjectDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const normalizeUrl = (raw: string): string => {
+    try {
+      const trimmed = raw.trim().replace(/\/+$/, "");
+      const url = new URL(
+        /^https?:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`
+      );
+      return url.href;
+    } catch {
+      return "";
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const normalizedGitUrl = normalizeUrl(gitUrl);
+    console.log(normalizedGitUrl);
+    if (!normalizedGitUrl.includes("github.com/")) {
+      alert("Please provide a valid GitHub repository URL.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/projects`, {
-        projectName,
-        repositoryUrl: gitUrl,
-        projectSlug,
-        deploymentType: projectType,
-        description: projectDescription,
-      });
+      await axiosInstance.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects`,
+        {
+          projectName,
+          repositoryUrl: normalizedGitUrl,
+          projectSlug,
+          deploymentType: projectType,
+          description: projectDescription,
+        }
+      );
       // console.log(result);
     } catch (e) {
       // console.log("Error: ", e);

@@ -46,7 +46,7 @@ interface Project {
     commitMessage: string;
     updatedAt: Date;
     logs: {
-      message: string;
+      log: string;
       timestamp: Date;
     }[];
     status: "SUCCESS" | "FAILED" | "PENDING" | "IN_PROGRESS";
@@ -516,7 +516,7 @@ const ProjectPage = () => {
                         ) || [];
 
                     const latestDeployment = sortedDeployments[0];
-                    // console.log("LD", latestDeployment);
+                    console.log("LD", latestDeployment);
                     const logs = latestDeployment?.logs || [];
 
                     return logs.length > 0 ? (
@@ -526,7 +526,7 @@ const ProjectPage = () => {
                             {new Date(log.timestamp).toLocaleString()}
                           </span>
                           <span className="text-zinc-400"> - </span>
-                          <span>{log.message}</span>
+                          <span>{log.log}</span>
                         </div>
                       ))
                     ) : (

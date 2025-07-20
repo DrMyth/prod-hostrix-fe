@@ -34,8 +34,8 @@ const Navbar = () => {
 
             <a
               href="mailto:deployments.hostrix@gmail.com?subject=Hostrix%20Feedback&body=Hi%20team%2C%0A%0AI%20have%20some%20feedback%20regarding%20Hostrix..."
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
             >
               <Button
                 variant="outline"

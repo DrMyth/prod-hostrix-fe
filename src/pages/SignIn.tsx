@@ -1,5 +1,5 @@
 import { LoginForm } from "@/components/signin";
-import backgroundImage from "../assets/placeholder.svg";
+import backgroundImage from "../assets/image.png";
 import LoginHeader from "@/components/auth-header";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

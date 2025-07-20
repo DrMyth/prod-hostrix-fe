@@ -30,7 +30,10 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="pt-10 pb-24 relative">
+    <section
+      id="how-it-works"
+      className="mt-15 pt-15 pb-24 relative bg-gray-50"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.span

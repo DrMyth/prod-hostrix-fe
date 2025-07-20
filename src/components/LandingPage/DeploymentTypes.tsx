@@ -94,7 +94,7 @@ const DeploymentCard = ({
 
 const DeploymentTypes = () => {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
+    <section className="py-24 bg-gray-50 relative overflow-hidden px-20">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute -top-[300px] -right-[300px] w-[600px] h-[600px] bg-blue-300 rounded-full mix-blend-multiply filter blur-[80px] opacity-10"></div>
         <div className="absolute bottom-0 -left-[300px] w-[600px] h-[600px] bg-purple-300 rounded-full mix-blend-multiply filter blur-[80px] opacity-10"></div>

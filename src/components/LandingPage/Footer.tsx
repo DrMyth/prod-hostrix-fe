@@ -3,7 +3,10 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer
+      id="footer"
+      className="bg-white border-t border-gray-100 xl:max-w-5xl 2xl:max-w-7xl mx-auto"
+    >
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0 }}
@@ -35,7 +38,7 @@ const Footer = () => {
           {/* Right: Social Icons */}
           <div className="flex space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/DrMyth"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-black transition"
@@ -43,7 +46,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/varunmaramreddy"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-black transition"
@@ -51,7 +54,7 @@ const Footer = () => {
               <Twitter size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/varunmaramreddy/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-black transition"

@@ -7,7 +7,7 @@ export const HostrixGlobe = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="relative h-[500px] w-full flex items-center justify-center"
+      className="relative h-[500px] w-full flex items-center justify-center 2xl:px-0 xl:px-20 xl:-mt-30 2xl:-mt-0"
     >
       <WorldMap
         dots={[
@@ -22,8 +22,8 @@ export const HostrixGlobe = () => {
             }, // Los Angeles
           },
           {
-            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
-            end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+            start: { lat: 61.2008, lng: -150.4937 }, // Alaska (Fairbanks)
+            end: { lat: -18.7975, lng: -49.8919 }, // Brazil (Brasília)
           },
           {
             start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)

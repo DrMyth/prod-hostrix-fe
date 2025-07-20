@@ -71,8 +71,8 @@ const Feature = ({ icon, title, description, delay }: FeatureProps) => {
 
 const Features = () => {
   return (
-    <section className="py-24 relative -mt-5">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section id="features" className="py-24 relative mt-5">
+      <div className="container mx-auto px-4 xl:max-w-5xl 2xl:max-w-7xl">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

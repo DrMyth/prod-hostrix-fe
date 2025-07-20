@@ -27,16 +27,19 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-600 hover:text-blue-600">
+            <a href="#features" className="text-gray-600 hover:text-blue-600">
               Features
             </a>
             {/* <a href="#" className="text-gray-600 hover:text-blue-600">
               Pricing
             </a> */}
-            <a href="#" className="text-gray-600 hover:text-blue-600">
+            <a
+              href="#how-it-works"
+              className="text-gray-600 hover:text-blue-600"
+            >
               How it Works
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600">
+            <a href="#footer" className="text-gray-600 hover:text-blue-600">
               Blog
             </a>
           </nav>
@@ -89,9 +92,9 @@ const Navbar = () => {
             <a href="#" className="block text-gray-600 hover:text-blue-600">
               Features
             </a>
-            <a href="#" className="block text-gray-600 hover:text-blue-600">
+            {/* <a href="#" className="block text-gray-600 hover:text-blue-600">
               Pricing
-            </a>
+            </a> */}
             <a href="#" className="block text-gray-600 hover:text-blue-600">
               Documentation
             </a>

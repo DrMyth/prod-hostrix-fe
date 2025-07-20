@@ -10,8 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative pt-36 overflow-hidden">
       {/* Background Gradients */}
@@ -54,6 +56,7 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6"
+              onClick={() => navigate("/signup")}
             >
               Get Started
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -93,7 +96,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-20 relative z-10"
         >
-          <div className="relative mx-auto max-w-5xl xl:max-w-7xl">
+          <div className="relative mx-auto max-w-5xl xl:max-w-5xl 2xl:max-w-7xl">
             <div className="absolute inset-0 -m-6 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 shadow-md"></div>
             <img
               src="/Dashboard.png"

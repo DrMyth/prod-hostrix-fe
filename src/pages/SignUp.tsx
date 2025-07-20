@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/placeholder.svg";
+import backgroundImage from "../assets/image.png";
 import { SignupForm } from "@/components/signup";
 import LoginHeader from "@/components/auth-header";
 import { useEffect, useState } from "react";

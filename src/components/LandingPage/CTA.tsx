@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CTA = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50"></div>
@@ -45,6 +47,9 @@ const CTA = () => {
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
+              onClick={() => {
+                navigate("/signup");
+              }}
             >
               Get Started for Free
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -54,6 +59,9 @@ const CTA = () => {
               size="lg"
               variant="outline"
               className="border-gray-300 hover:bg-gray-100 px-8 py-6 text-lg"
+              onClick={() =>
+                window.open("https://github.com/DrMyth/Hostrix", "_blank")
+              }
             >
               View on GitHub
             </Button>
